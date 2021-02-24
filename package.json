@@ -1,0 +1,8 @@
+{
+  "name": "stone-challenge-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Julio-Lost/stone-challenge-api.git",
+  "author": "Julio-Lost <juliolost00@gmail.com>",
+  "license": "MIT"
+}
