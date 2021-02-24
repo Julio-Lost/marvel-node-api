@@ -11,7 +11,8 @@
   },
   "husky":{
     "hooks": {
-      "pre-commit": "lint"
+      "pre-commit": "lint:fix",
+      "git add"
     }
   },
   "devDependencies": {
