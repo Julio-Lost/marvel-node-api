@@ -1,4 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, OneToMany } from 'typeorm';
+import { UserCharacterEntity } from './UserCharacterEntity';
+import { UserComicEntity } from './UserComicEntity';
 
 @Entity('User')
 export class UserEntity {
@@ -19,4 +21,10 @@ export class UserEntity {
 
 	@UpdateDateColumn()
 	updated_at: Date;
+
+	@OneToMany(() => UserCharacterEntity, (character) => character.user)
+	characters: UserCharacterEntity[];
+
+	@OneToMany(() => UserComicEntity, (comic) => comic.user)
+	comics: UserComicEntity[];
 }
