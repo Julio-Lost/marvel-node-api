@@ -1,3 +1,7 @@
+require('dotenv').config({
+	path: process.env.NODE_ENV === 'development' ? '.env.development' : '.env.production',
+});
+
 const host = process.env.DATABASE_HOST;
 const port = process.env.DATABASE_PORT;
 const username = process.env.DATABASE_USER;
@@ -9,22 +13,7 @@ const database = process.env.DATABASE;
 
 const url = `postgres://${username}:${password}@${host}:${port}/${database}`;
 
-export default [
-	{
-		name: 'test',
-		type: 'sqlite',
-		database: ':memory:',
-		dropSchema: true,
-		logging: false,
-		synchroize: true,
-		migrationsRun: true,
-		entities: [entityPath],
-		migrations: [migrationsPath],
-		cli: {
-			entitiesDir: './src/domain/entities/',
-			migrationsDir: './src/infrastructure/database/migrations/',
-		},
-	},
+module.exports = [
 	{
 		name: 'development',
 		type: 'postgres',
@@ -52,6 +41,21 @@ export default [
 				rejectUnauthorized: false,
 			},
 		},
+		entities: [entityPath],
+		migrations: [migrationsPath],
+		cli: {
+			entitiesDir: './src/domain/entities/',
+			migrationsDir: './src/infrastructure/database/migrations/',
+		},
+	},
+	{
+		name: 'test',
+		type: 'sqlite',
+		database: ':memory:',
+		dropSchema: true,
+		logging: false,
+		synchroize: true,
+		migrationsRun: true,
 		entities: [entityPath],
 		migrations: [migrationsPath],
 		cli: {

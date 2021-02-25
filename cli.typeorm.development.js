@@ -1,3 +1,7 @@
+require('dotenv').config({
+	path: process.env.NODE_ENV === 'development' ? '.env.development' : '.env.production',
+});
+
 const host = process.env.DATABASE_HOST;
 const port = process.env.DATABASE_PORT;
 const username = process.env.DATABASE_USER;
@@ -9,13 +13,15 @@ const database = process.env.DATABASE;
 
 const url = `postgres://${username}:${password}@${host}:${port}/${database}`;
 
-export const type = 'postgres';
-export const url = url;
-export const entities = [entityPath];
-export const migrations = [migrationsPath];
-export const synchroize = true;
-export const migrationsRun = true;
-export const cli = {
-	entitiesDir: './src/domain/entities/',
-	migrationsDir: './src/infrastructure/database/migrations/',
+module.exports = {
+	type: 'postgres',
+	url: url,
+	entities: [entityPath],
+	migrations: [migrationsPath],
+	synchroize: true,
+	migrationsRun: true,
+	cli: {
+		entitiesDir: './src/domain/entities/',
+		migrationsDir: './src/infrastructure/database/migrations/',
+	},
 };

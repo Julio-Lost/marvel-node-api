@@ -1,3 +1,7 @@
+require('dotenv').config({
+	path: process.env.NODE_ENV === 'development' ? '.env.development' : '.env.production',
+});
+
 import 'reflect-metadata';
 import { ConnectionDatabase } from './infrastructure/database';
 import express, { Express, Application } from 'express';
