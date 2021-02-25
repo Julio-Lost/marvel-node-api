@@ -15,8 +15,8 @@
     "typeorm:dev": "NODE_ENV=development ts-node ./node_modules/typeorm/cli.js --config cli.typeorm.development.js",
     "typeorm": "NODE_ENV=production ts-node ./node_modules/typeorm/cli.js --config cli.typeorm.production.js",
     "prod": "NODE_ENV=production node dist/index.js",
-    "dev": "NODE_ENV=development ts-node-dev src/index.ts",
-    "run-migration": "yarn typeorm:dev schema:sync"
+    "run-migration": "yarn typeorm:dev schema:sync",
+    "dev": "NODE_ENV=development ts-node-dev -r tsconfig-paths/register src/index.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10",
@@ -32,6 +32,7 @@
     "ts-jest": "^26.5.2",
     "ts-node": "^9.1.1",
     "ts-node-dev": "^1.1.2",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^4.2.2"
   },
   "dependencies": {
