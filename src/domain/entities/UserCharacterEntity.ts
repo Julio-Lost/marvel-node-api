@@ -1,4 +1,13 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import {
+	Entity,
+	Column,
+	PrimaryGeneratedColumn,
+	CreateDateColumn,
+	UpdateDateColumn,
+	ManyToOne,
+	JoinColumn,
+} from 'typeorm';
+import { UserEntity } from './UserEntity';
 
 @Entity('UserCharacter')
 export class UserCharacterEntity {
@@ -28,4 +37,8 @@ export class UserCharacterEntity {
 
 	@UpdateDateColumn()
 	updated_at: Date;
+
+	@ManyToOne(() => UserEntity, (user) => user.characters)
+	@JoinColumn({ name: 'userId' })
+	user: UserEntity;
 }
