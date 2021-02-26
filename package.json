@@ -16,8 +16,7 @@
     "run-migration": "yarn typeorm:dev schema:sync",
     "dev": "NODE_ENV=development ts-node-dev -r tsconfig-paths/register src/index.ts",
     "dev:server": "NODE_ENV=development ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/index.ts",
-    "lint": "eslint src --max-warnings=0",
-    "lint:fix": "eslint ./src --ext .ts --fix"
+    "lint": "eslint src --max-warnings=0"
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",

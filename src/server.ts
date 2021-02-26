@@ -48,7 +48,7 @@ export class SetupServer {
 
 	public start(): void {
 		this.server.listen(process.env.PORT || this.port, () => {
-			console.in('Server listening at', this.port);
+			console.info('Server listening at', this.port);
 		});
 	}
 
