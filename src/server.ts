@@ -1,17 +1,15 @@
-import { config } from "dotenv";
+import { config } from 'dotenv';
 import 'reflect-metadata';
 import { ConnectionDatabase } from './infrastructure/database';
 import express, { Express, Application } from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import Routes from './application/routes';
+import { AuthorizationMiddleware } from './application/middlewares/Authorization';
 
 config({
-	path:
-	  process.env.NODE_ENV === "development"
-		? ".env.development"
-		: ".env.production",
-  });
+	path: process.env.NODE_ENV === 'development' ? '.env.development' : '.env.production',
+});
 
 export class SetupServer {
 	protected port: string;
@@ -37,9 +35,14 @@ export class SetupServer {
 	}
 
 	private setupExpress(): void {
+		const unless = {
+			path: [{ url: /^\/api\/user\/session|\/api\/user\/create/ }],
+		};
+
 		this.server.use(bodyParser.urlencoded({ extended: true }));
 		this.server.use(bodyParser.json());
 		this.server.use(cors());
+		this.server.use(AuthorizationMiddleware.unless(unless));
 		this.server.use('/api', Routes);
 	}
 
