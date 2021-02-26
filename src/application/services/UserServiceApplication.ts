@@ -1,3 +1,4 @@
+import { getCustomRepository } from 'typeorm';
 import ICreateUserCharacterDTO from '@domain/dtos/ICreateUserCharacterDTO';
 import ICreateUserComicDTO from '@domain/dtos/ICreateUserComicDTO';
 import ICreateUserDTO from '@domain/dtos/ICreateUserDTO';
@@ -8,7 +9,6 @@ import UserRepository from '@infra/repositories/UserRepository';
 import { emailError, genericError, HttpResponse, ok, serverError, userNotExistError } from '@shared/useful/httpHelper';
 import { tokenGenerator } from '@shared/useful/jwt';
 import bcrypt from 'bcrypt';
-import { getCustomRepository } from 'typeorm';
 import IUserServiceApplication from '@application/services/Interfaces/IUserServiceApplication';
 
 export class UserServiceApplication implements IUserServiceApplication {

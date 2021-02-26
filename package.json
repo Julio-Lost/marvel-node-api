@@ -16,7 +16,8 @@
     "typeorm": "NODE_ENV=production ts-node ./node_modules/typeorm/cli.js --config cli.typeorm.production.js",
     "prod": "NODE_ENV=production node dist/index.js",
     "run-migration": "yarn typeorm:dev schema:sync",
-    "dev": "NODE_ENV=development ts-node-dev -r tsconfig-paths/register src/index.ts"
+    "dev": "NODE_ENV=development ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "dev:server": "NODE_ENV=development ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/index.ts"
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",

@@ -1,7 +1,7 @@
 import { ComicServiceApplication } from '@application/services/ComicServiceApplication';
 import { responseTreated } from '@shared/useful/httpHelper';
 import { NextFunction, Request, Response } from 'express';
-import { getCharactersOfComicScheme, getComicsScheme } from './scheme';
+import { getComicCharacterScheme, getComicsScheme } from './scheme';
 
 export class ComicController {
 	async getComics(req: Request, res: Response, next: NextFunction): Promise<void> {
@@ -25,7 +25,7 @@ export class ComicController {
 		try {
 			const { comicId } = req.params;
 			const { userId } = req.body;
-			await getCharactersOfComicScheme.validateAsync(req.body);
+			await getComicCharacterScheme.validateAsync(req.body);
 
 			const comicServiceApplication = new ComicServiceApplication();
 

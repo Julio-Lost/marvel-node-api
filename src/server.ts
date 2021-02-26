@@ -1,20 +1,25 @@
-require('dotenv').config({
-	path: process.env.NODE_ENV === 'development' ? '.env.development' : '.env.production',
-});
-
+import { config } from "dotenv";
 import 'reflect-metadata';
 import { ConnectionDatabase } from './infrastructure/database';
 import express, { Express, Application } from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import Routes from './application/routes';
+
+config({
+	path:
+	  process.env.NODE_ENV === "development"
+		? ".env.development"
+		: ".env.production",
+  });
 
 export class SetupServer {
-	protected porta: string;
+	protected port: string;
 	protected server: Express;
 
-	constructor(porta: string) {
+	constructor(port: string) {
 		this.server = express();
-		this.porta = porta;
+		this.port = port;
 	}
 
 	public async init(): Promise<void> {
@@ -25,7 +30,7 @@ export class SetupServer {
 	private async getConnectionDatabase(): Promise<void> {
 		try {
 			await ConnectionDatabase();
-			console.log('Database connection successfully established!');
+			console.log('Database connection successfully!');
 		} catch (error) {
 			console.log(error);
 		}
@@ -35,11 +40,12 @@ export class SetupServer {
 		this.server.use(bodyParser.urlencoded({ extended: true }));
 		this.server.use(bodyParser.json());
 		this.server.use(cors());
+		this.server.use('/api', Routes);
 	}
 
 	public start(): void {
-		this.server.listen(process.env.PORT || this.porta, () => {
-			console.info('Server listening at', this.porta);
+		this.server.listen(process.env.PORT || this.port, () => {
+			console.info('Server listening at', this.port);
 		});
 	}
 
