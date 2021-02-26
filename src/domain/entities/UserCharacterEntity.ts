@@ -7,13 +7,11 @@ import {
 	ManyToOne,
 	JoinColumn,
 } from 'typeorm';
+import { BaseEntity } from './BaseEntity';
 import { UserEntity } from './UserEntity';
 
 @Entity('UserCharacter')
-export class UserCharacterEntity {
-	@PrimaryGeneratedColumn('uuid')
-	id: string;
-
+export class UserCharacterEntity extends BaseEntity {
 	@Column()
 	characterId: string;
 
@@ -31,12 +29,6 @@ export class UserCharacterEntity {
 
 	@Column()
 	userId: string;
-
-	@CreateDateColumn()
-	created_at: Date;
-
-	@UpdateDateColumn()
-	updated_at: Date;
 
 	@ManyToOne(() => UserEntity, (user) => user.characters)
 	@JoinColumn({ name: 'userId' })

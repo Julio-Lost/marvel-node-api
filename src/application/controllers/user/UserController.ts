@@ -11,7 +11,6 @@ import {
 	updateSchema,
 	userIdScheme,
 } from './scheme';
-
 export class UserController {
 	async createUser(req: Request, res: Response, next: NextFunction): Promise<void> {
 		try {

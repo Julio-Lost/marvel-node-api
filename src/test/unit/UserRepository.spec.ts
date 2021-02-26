@@ -51,7 +51,7 @@ describe('UserRepository unit tests', () => {
 		expect(userUpdated?.name).toBe(userUpdateDto.name);
 	});
 
-	it('Should_Find_User_By_Email', async () => {
+	it('Should_Find_User_By_Email_In_Database', async () => {
 		//Given
 		const userRepository = getCustomRepository(UserRepository);
 
