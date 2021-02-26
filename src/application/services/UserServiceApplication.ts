@@ -7,7 +7,7 @@ import UserCharacterRepository from '@infra/repositories/UserCharacterRepository
 import UserComicRepository from '@infra/repositories/UserComicRepository';
 import UserRepository from '@infra/repositories/UserRepository';
 import { emailError, genericError, HttpResponse, ok, serverError, userNotExistError } from '@shared/useful/httpHelper';
-import { tokenGenerator } from '@shared/useful/jwt';
+import { tokenGenerator } from '@src/shared/useful/jsonwebtoken';
 import bcrypt from 'bcrypt';
 import IUserServiceApplication from '@application/services/Interfaces/IUserServiceApplication';
 

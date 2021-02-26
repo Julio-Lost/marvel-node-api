@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { responseTreated, unauthorized } from '@shared/useful/httpHelper';
-import { tokenDecode } from '@shared/useful/jwt';
+import { tokenDecode } from '@src/shared/useful/jsonwebtoken';
 import unless from 'express-unless';
 
 export async function AuthorizationMiddleware(req: Request, res: Response, next: NextFunction) {
