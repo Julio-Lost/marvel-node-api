@@ -1,8 +1,8 @@
 import { UpdateResult } from 'typeorm';
 
-import ICreateUserDTO from '@domain/dtos/ICreateUserDTO';
-import { UserEntity } from '@domain/entities/UserEntity';
-import IUpdateUserDTO from '@domain/dtos/IUpdateUserDTO';
+import ICreateUserDTO from '../dtos/ICreateUserDTO';
+import { UserEntity } from '../entities/UserEntity';
+import IUpdateUserDTO from '../dtos/IUpdateUserDTO';
 
 export default interface IUserRepository {
 	createUser(data: ICreateUserDTO): Promise<UserEntity>;

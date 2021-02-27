@@ -1,4 +1,4 @@
-import { HttpResponse } from '@shared/useful/httpHelper';
+import { HttpResponse } from '../../../shared/useful/httpHelper';
 
 export default interface ICharacterServiceApplication {
 	getCharacters(userId: string, searchParameter: string): Promise<HttpResponse>;

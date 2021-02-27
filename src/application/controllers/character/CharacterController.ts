@@ -1,5 +1,5 @@
-import { CharacterServiceApplication } from '@application/services/CharacterServiceApplication';
-import { responseTreated } from '@shared/useful/httpHelper';
+import { CharacterServiceApplication } from '../../services/CharacterServiceApplication';
+import { responseTreated } from '../../../shared/useful/httpHelper';
 import { NextFunction, Request, Response } from 'express';
 import { getCharactersScheme, getComicsOfCharacterScheme } from './scheme';
 

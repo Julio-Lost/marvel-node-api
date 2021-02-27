@@ -1,11 +1,11 @@
 import { getCustomRepository } from 'typeorm';
-import { HttpResponse, ok, serverError } from '@shared/useful/httpHelper';
-import IComicServiceApplication from '@application/services/Interfaces/IComicServiceApplication';
-import IResponseApiMarvelDTO from '@domain/dtos/IResponseApiMarvelDTO';
-import { ResponseApiMarvelViewModel } from '@src/domain/models/ResponseApiMarvelViewModel';
-import UserComicRepository from '@infra/repositories/UserComicRepository';
-import UserCharacterRepository from '@infra/repositories/UserCharacterRepository';
-import { getApiMarvel, searchApiMarvel } from '@src/shared/useful/useFetch';
+import { HttpResponse, ok, serverError } from '../../shared/useful/httpHelper';
+import IComicServiceApplication from './Interfaces/IComicServiceApplication';
+import IResponseApiMarvelDTO from '../../domain/dtos/IResponseApiMarvelDTO';
+import { ResponseApiMarvelViewModel } from '../../domain/models/ResponseApiMarvelViewModel';
+import UserComicRepository from '../../infrastructure/repositories/UserComicRepository';
+import UserCharacterRepository from '../../infrastructure/repositories/UserCharacterRepository';
+import { getApiMarvel, searchApiMarvel } from '../..//shared/useful/useFetch';
 
 export class ComicServiceApplication implements IComicServiceApplication {
 	public async getComics(userId: string, searchParameter: string): Promise<HttpResponse> {

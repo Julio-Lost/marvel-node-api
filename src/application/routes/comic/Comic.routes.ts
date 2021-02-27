@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { ComicController } from '@application/controllers/comic/ComicController';
+import { ComicController } from '../../controllers/comic/ComicController';
 
 const comicRouter = Router();
 const comicController = new ComicController();

@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Values } from '@shared/constants/value';
+import { Values } from '../constants/value';
 
 const baseUrl = Values.baseUrlMarvelApi;
 const hash = Values.marvelApiHash;

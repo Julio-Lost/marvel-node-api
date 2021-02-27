@@ -1,4 +1,4 @@
-import { CharacterController } from '@application/controllers/character/CharacterController';
+import { CharacterController } from '../../controllers/character/CharacterController';
 import { Router } from 'express';
 
 const characterRouter = Router();

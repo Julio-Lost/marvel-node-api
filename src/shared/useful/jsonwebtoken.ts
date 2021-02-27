@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import 'dotenv/config';
-import { Values } from '@shared/constants/value';
+import { Values } from '../constants/value';
 
 export function tokenGenerator(userId: string): string {
 	return jwt.sign({ userId }, Values.tokenKey);

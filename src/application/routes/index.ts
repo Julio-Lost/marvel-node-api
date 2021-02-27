@@ -1,8 +1,8 @@
 import { Router } from 'express';
 
-import UserRoutes from '@application/routes/user/User.routes';
-import ComicRoutes from '@application/routes/comic/Comic.routes';
-import CharacterRoutes from '@application/routes/character/Character.routes';
+import UserRoutes from './user/User.routes';
+import ComicRoutes from './comic/Comic.routes';
+import CharacterRoutes from './character/Character.routes';
 
 const router = Router();
 
