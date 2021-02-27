@@ -1,0 +1,357 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "STONE API",
+    "description": ""
+  },
+  "host": "localhost:3333",
+  "basePath": "/",
+  "tags": [],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/user/session": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "email",
+          "type": "string",
+          "required": true,
+          "description": "user email"
+        },{
+          "name": "password",
+          "type": "string",
+          "required": true,
+          "description": "user password"
+        }
+      ],
+      "responses": {   "200": {
+        "description": "Success."
+      },
+      "405": {
+        "description": "Invalid input"
+      }}
+      }
+    },
+    "/user/create-user": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "user name"
+        },{
+          "name": "email",
+          "type": "string",
+          "required": true,
+          "description": "user email"
+        },{
+          "name": "password",
+          "type": "string",
+          "required": true,
+          "description": "user password"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/user/update-user": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "id",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        },{
+          "name": "email",
+          "type": "string",
+          "required": true,
+          "description": "user email"
+        },{
+          "name": "password",
+          "type": "string",
+          "required": true,
+          "description": "user password"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/user/add-favorite-comic": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "comicId",
+          "type": "string",
+          "required": true,
+          "description": "comic id"
+        },{
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "description": "title"
+        },{
+          "name": "description",
+          "type": "string",
+          "required": true,
+          "description": "description"
+        },
+        {
+          "name": "thumbnailUrl",
+          "type": "string",
+          "required": true,
+          "description": "thumbnail url"
+        },
+        {
+          "name": "detailUrl",
+          "type": "string",
+          "required": true,
+          "description": "detail url"
+        },
+        {
+          "name": "userId",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/user/add-favorite-character": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "characterId",
+          "type": "string",
+          "required": true,
+          "description": "comic id"
+        },{
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "description": "title"
+        },{
+          "name": "description",
+          "type": "string",
+          "required": true,
+          "description": "description"
+        },
+        {
+          "name": "thumbnailUrl",
+          "type": "string",
+          "required": true,
+          "description": "thumbnail url"
+        },
+        {
+          "name": "detailUrl",
+          "type": "string",
+          "required": true,
+          "description": "detail url"
+        },
+        {
+          "name": "userId",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/user/remove-favorite-comic": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "comicId",
+          "type": "string",
+          "required": true,
+          "description": "comic id"
+        },
+        {
+          "name": "userId",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/user/remove-favorite-character": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "characterId",
+          "type": "string",
+          "required": true,
+          "description": "character Id"
+        },
+        {
+          "name": "userId",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/user/{userId}/favorites-characters": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "userId",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/user/{userId}/favorites-comics": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "userId",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/comic/": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "userId",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        },{
+          "name": "searchParameter",
+          "type": "string",
+          "required": true,
+          "description": "search parameter"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/comic/{comicId}/characters": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "userId",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/character/": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "userId",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        },{
+          "name": "searchParameter",
+          "type": "string",
+          "required": true,
+          "description": "search parameter"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    },
+    "/character/{characterId}/comics": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [{
+          "name": "userId",
+          "type": "string",
+          "required": true,
+          "description": "user id"
+        }],
+        "responses": {   "200": {
+          "description": "Success."
+        },
+        "405": {
+          "description": "Invalid input"
+        }}
+      }
+    }
+  },
+  "definitions": {}
+}
