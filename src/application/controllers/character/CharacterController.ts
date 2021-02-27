@@ -21,7 +21,7 @@ export class CharacterController {
 		}
 	}
 
-	async getCharacterComicInfor(req: Request, res: Response, next: NextFunction): Promise<void> {
+	async getCharacterComicInfo(req: Request, res: Response, next: NextFunction): Promise<void> {
 		try {
 			const { characterId } = req.params;
 			const { userId } = req.body;
