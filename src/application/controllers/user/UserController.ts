@@ -1,4 +1,4 @@
-import { responseTreated } from '@shared/useful/httpHelper';
+import { responseTreated } from '../../../shared/useful/httpHelper';
 import { NextFunction, Request, Response } from 'express';
 import { UserServiceApplication } from '../../services/UserServiceApplication';
 import {

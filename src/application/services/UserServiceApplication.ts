@@ -1,15 +1,22 @@
 import { getCustomRepository } from 'typeorm';
-import ICreateUserCharacterDTO from '@domain/dtos/ICreateUserCharacterDTO';
-import ICreateUserComicDTO from '@domain/dtos/ICreateUserComicDTO';
-import ICreateUserDTO from '@domain/dtos/ICreateUserDTO';
-import IUpdateUserDTO from '@domain/dtos/IUpdateUserDTO';
-import UserCharacterRepository from '@infra/repositories/UserCharacterRepository';
-import UserComicRepository from '@infra/repositories/UserComicRepository';
-import UserRepository from '@infra/repositories/UserRepository';
-import { emailError, genericError, HttpResponse, ok, serverError, userNotExistError } from '@shared/useful/httpHelper';
-import { tokenGenerator } from '@src/shared/useful/jsonwebtoken';
+import ICreateUserCharacterDTO from '../../domain/dtos/ICreateUserCharacterDTO';
+import ICreateUserComicDTO from '../../domain/dtos/ICreateUserComicDTO';
+import ICreateUserDTO from '../../domain/dtos/ICreateUserDTO';
+import IUpdateUserDTO from '../../domain/dtos/IUpdateUserDTO';
+import UserCharacterRepository from '../../infrastructure/repositories/UserCharacterRepository';
+import UserComicRepository from '../../infrastructure/repositories/UserComicRepository';
+import UserRepository from '../../infrastructure/repositories/UserRepository';
+import {
+	emailError,
+	genericError,
+	HttpResponse,
+	ok,
+	serverError,
+	userNotExistError,
+} from '../../shared/useful/httpHelper';
+import { tokenGenerator } from '../../shared/useful/jsonwebtoken';
 import bcrypt from 'bcrypt';
-import IUserServiceApplication from '@application/services/Interfaces/IUserServiceApplication';
+import IUserServiceApplication from './Interfaces/IUserServiceApplication';
 
 export class UserServiceApplication implements IUserServiceApplication {
 	public async createUser(data: ICreateUserDTO): Promise<HttpResponse> {

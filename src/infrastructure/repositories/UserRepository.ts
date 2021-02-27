@@ -1,8 +1,8 @@
 import { EntityRepository, Repository, UpdateResult } from 'typeorm';
-import { UserEntity } from '@domain/entities/UserEntity';
-import IUserRepository from '@domain/repositories/IUserRepository';
-import ICreateUserDTO from '@domain/dtos/ICreateUserDTO';
-import IUpdateUserDTO from '@domain/dtos/IUpdateUserDTO';
+import { UserEntity } from '../../domain/entities/UserEntity';
+import IUserRepository from '../../domain/repositories/IUserRepository';
+import ICreateUserDTO from '../../domain/dtos/ICreateUserDTO';
+import IUpdateUserDTO from '../../domain/dtos/IUpdateUserDTO';
 
 @EntityRepository(UserEntity)
 class UserRepository extends Repository<UserEntity> implements IUserRepository {

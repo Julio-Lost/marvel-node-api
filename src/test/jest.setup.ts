@@ -1,4 +1,4 @@
-import { SetupServer } from '@src/server';
+import { SetupServer } from '../server';
 import supertest from 'supertest';
 import { getConnection } from 'typeorm';
 

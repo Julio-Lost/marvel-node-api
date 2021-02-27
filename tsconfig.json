@@ -30,6 +30,6 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true
 	},
-	"include": ["./src/**/*.ts", "swagger.ts"],
+	"include": ["./src/**/*.ts"],
 	"exclude": ["./node_modules/*", "dist"]
 }

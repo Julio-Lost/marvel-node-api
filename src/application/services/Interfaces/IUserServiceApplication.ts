@@ -1,8 +1,8 @@
-import ICreateUserDTO from '@domain/dtos/ICreateUserDTO';
-import IUpdateUserDTO from '@domain/dtos/IUpdateUserDTO';
-import ICreateUserCharacterDTO from '@domain/dtos/ICreateUserCharacterDTO';
-import ICreateUserComicDTO from '@domain/dtos/ICreateUserComicDTO';
-import { HttpResponse } from '@shared/useful/httpHelper';
+import ICreateUserDTO from '../../../domain/dtos/ICreateUserDTO';
+import IUpdateUserDTO from '../../../domain/dtos/IUpdateUserDTO';
+import ICreateUserCharacterDTO from '../../../domain/dtos/ICreateUserCharacterDTO';
+import ICreateUserComicDTO from '../../../domain/dtos/ICreateUserComicDTO';
+import { HttpResponse } from '../../../shared/useful/httpHelper';
 
 export default interface IUserServiceApplication {
 	createUser(data: ICreateUserDTO): Promise<HttpResponse>;

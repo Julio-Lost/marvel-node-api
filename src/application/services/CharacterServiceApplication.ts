@@ -1,11 +1,11 @@
 import { getCustomRepository } from 'typeorm';
-import IResponseApiMarvelDTO from '@domain/dtos/IResponseApiMarvelDTO';
-import { ResponseApiMarvelViewModel } from '@domain/models/ResponseApiMarvelViewModel';
-import UserCharacterRepository from '@infra/repositories/UserCharacterRepository';
-import UserComicRepository from '@infra/repositories/UserComicRepository';
-import { HttpResponse, ok, serverError } from '@shared/useful/httpHelper';
-import { getApiMarvel, searchApiMarvel } from '@shared/useful/useFetch';
-import ICharacterServiceApplication from '@application/services/Interfaces/ICharacterServiceApplication';
+import IResponseApiMarvelDTO from '../../domain/dtos/IResponseApiMarvelDTO';
+import { ResponseApiMarvelViewModel } from '../../domain/models/ResponseApiMarvelViewModel';
+import UserCharacterRepository from '../../infrastructure/repositories/UserCharacterRepository';
+import UserComicRepository from '../../infrastructure/repositories/UserComicRepository';
+import { HttpResponse, ok, serverError } from '../../shared/useful/httpHelper';
+import { getApiMarvel, searchApiMarvel } from '../../shared/useful/useFetch';
+import ICharacterServiceApplication from './Interfaces/ICharacterServiceApplication';
 
 export class CharacterServiceApplication implements ICharacterServiceApplication {
 	public async getCharacters(userId: string, searchParameter: string): Promise<HttpResponse> {

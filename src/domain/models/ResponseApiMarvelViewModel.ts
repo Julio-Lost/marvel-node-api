@@ -1,4 +1,4 @@
-import { DataResult, IResponseData } from '@domain/dtos/IResponseApiMarvelDTO';
+import { DataResult, IResponseData } from '../dtos/IResponseApiMarvelDTO';
 
 export class ResponseApiMarvelViewModel {
 	offset: number;
