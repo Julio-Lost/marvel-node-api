@@ -5,6 +5,6 @@ const characterRouter = Router();
 const characterController = new CharacterController();
 
 characterRouter.post('/', characterController.getCharacters);
-characterRouter.post('/:characterId/comics', characterController.getCharacterComicInfor);
+characterRouter.post('/:characterId/comics', characterController.getCharacterComicInfo);
 
 export default characterRouter;
