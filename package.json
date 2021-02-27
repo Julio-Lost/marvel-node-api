@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/Julio-Lost/stone-challenge-api.git",
+  "engines": {
+    "node": "14.x"
+  },
   "author": "Julio-Lost <juliolost00@gmail.com>",
   "license": "MIT",
   "scripts": {
