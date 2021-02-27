@@ -5,6 +5,8 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import Routes from './application/routes';
 import { AuthorizationMiddleware } from './application/middlewares/Authorization';
+import swaggerUi from 'swagger-ui-express';
+import swaggerFile from '../swagger_output.json';
 
 export class SetupServer {
 	protected port: string;
@@ -31,7 +33,7 @@ export class SetupServer {
 
 	private setupExpress(): void {
 		const unless = {
-			path: [{ url: /^\/api\/user\/session|\/api\/user\/create-user/ }],
+			path: [{ url: /^\/api\/user\/session|\/api-docs|\/api\/user\/create-user/ }],
 		};
 
 		this.server.use(bodyParser.urlencoded({ extended: true }));
@@ -39,6 +41,7 @@ export class SetupServer {
 		this.server.use(cors());
 		this.server.use(AuthorizationMiddleware.unless(unless));
 		this.server.use('/api', Routes);
+		this.server.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 	}
 
 	public start(): void {
