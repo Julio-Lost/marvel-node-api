@@ -18,6 +18,12 @@ module.exports = {
 	migrations: [migrationsPath],
 	synchroize: true,
 	migrationsRun: true,
+	ssl: true,
+	extra: {
+		ssl: {
+			rejectUnauthorized: false,
+		},
+	},
 	cli: {
 		entitiesDir: './src/domain/entities/',
 		migrationsDir: './src/infrastructure/database/migrations/',
