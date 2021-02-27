@@ -1,7 +1,7 @@
 import { DeleteResult } from 'typeorm';
 
-import { UserCharacterEntity } from '@domain/entities/UserCharacterEntity';
-import ICreateUserCharacterDTO from '@domain/dtos/ICreateUserCharacterDTO';
+import { UserCharacterEntity } from '../entities/UserCharacterEntity';
+import ICreateUserCharacterDTO from '../dtos/ICreateUserCharacterDTO';
 
 export default interface IUserCharacterRepository {
 	createUserCharacter(data: ICreateUserCharacterDTO): Promise<UserCharacterEntity>;

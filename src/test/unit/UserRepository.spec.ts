@@ -1,7 +1,7 @@
 import { getCustomRepository } from 'typeorm';
-import ICreateUserDTO from '@domain/dtos/ICreateUserDTO';
-import IUpdateUserDTO from '@domain/dtos/IUpdateUserDTO';
-import UserRepository from '@infra/repositories/UserRepository';
+import ICreateUserDTO from '../../domain/dtos/ICreateUserDTO';
+import IUpdateUserDTO from '../../domain/dtos/IUpdateUserDTO';
+import UserRepository from '../../infrastructure/repositories/UserRepository';
 
 describe('UserRepository unit tests', () => {
 	it('Should_Create_User_In_The_Database', async () => {

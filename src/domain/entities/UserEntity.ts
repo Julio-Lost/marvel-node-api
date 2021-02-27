@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, OneToMany } from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
 import { BaseEntity } from './BaseEntity';
 import { UserCharacterEntity } from './UserCharacterEntity';
 import { UserComicEntity } from './UserComicEntity';

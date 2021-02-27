@@ -6,7 +6,7 @@ import cors from 'cors';
 import Routes from './application/routes';
 import { AuthorizationMiddleware } from './application/middlewares/Authorization';
 import swaggerUi from 'swagger-ui-express';
-import swaggerFile from '../swagger_output.json';
+import swaggerFile from './swagger_output.json';
 
 export class SetupServer {
 	protected port: string;

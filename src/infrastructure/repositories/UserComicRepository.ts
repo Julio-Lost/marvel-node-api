@@ -1,8 +1,8 @@
 import { DeleteResult, EntityRepository, Repository } from 'typeorm';
 
-import ICreateUserComicDTO from '@domain/dtos/ICreateUserComicDTO';
-import { UserComicEntity } from '@domain/entities/UserComicEntity';
-import IUserComicRepository from '@domain/repositories/IUserComicRepository';
+import ICreateUserComicDTO from '../../domain/dtos/ICreateUserComicDTO';
+import { UserComicEntity } from '../../domain/entities/UserComicEntity';
+import IUserComicRepository from '../../domain/repositories/IUserComicRepository';
 
 @EntityRepository(UserComicEntity)
 class UserComicRepository extends Repository<UserComicEntity> implements IUserComicRepository {

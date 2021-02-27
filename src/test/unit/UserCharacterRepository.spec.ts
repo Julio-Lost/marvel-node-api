@@ -1,8 +1,8 @@
 import { getCustomRepository } from 'typeorm';
-import ICreateUserCharacterDTO from '@domain/dtos/ICreateUserCharacterDTO';
-import ICreateUserDTO from '@domain/dtos/ICreateUserDTO';
-import UserCharacterRepository from '@infra/repositories/UserCharacterRepository';
-import UserRepository from '@infra/repositories/UserRepository';
+import ICreateUserCharacterDTO from '../../domain/dtos/ICreateUserCharacterDTO';
+import ICreateUserDTO from '../../domain/dtos/ICreateUserDTO';
+import UserCharacterRepository from '../../infrastructure/repositories/UserCharacterRepository';
+import UserRepository from '../../infrastructure/repositories/UserRepository';
 
 describe('UserCharacterRepository unit test', () => {
 	it('Should_Create_User_Character_In_The_Database', async () => {

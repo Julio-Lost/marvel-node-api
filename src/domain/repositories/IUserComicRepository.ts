@@ -1,7 +1,7 @@
 import { DeleteResult } from 'typeorm';
 
-import ICreateUserComicDTO from '@domain/dtos/ICreateUserComicDTO';
-import { UserComicEntity } from '@domain/entities/UserComicEntity';
+import ICreateUserComicDTO from '../dtos/ICreateUserComicDTO';
+import { UserComicEntity } from '../entities/UserComicEntity';
 
 export default interface IUserComicRepository {
 	createUserComic(data: ICreateUserComicDTO): Promise<UserComicEntity>;
