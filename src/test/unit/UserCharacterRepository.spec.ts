@@ -11,7 +11,7 @@ describe('UserCharacterRepository unit test', () => {
 
 		const userDto: ICreateUserDTO = {
 			email: 'testcreateusercharacter@mail.com',
-			name: 'Vinicius Batista',
+			name: 'Teste da Silva',
 			password: '123456',
 		};
 		const user = await userRepository.createUser(userDto);
