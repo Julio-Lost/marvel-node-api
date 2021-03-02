@@ -12,6 +12,6 @@ userRouter.post('/add-favorite-character', userController.addFavoriteCharacter);
 userRouter.post('/remove-favorite-comic', userController.removeFavoriteComic);
 userRouter.post('/remove-favorite-character', userController.removeFavoriteCharacter);
 userRouter.get('/:userId/favorites-comics', userController.getFavoriteComics);
-userRouter.get('/:userId/favorites-character', userController.getFavoriteCharacters);
+userRouter.get('/:userId/favorites-characters', userController.getFavoriteCharacters);
 
 export default userRouter;
