@@ -3,6 +3,7 @@
 The project consists of an api rest that will allow the registration of users, management of users, favorite comics and characters.
 
 - Access here: https://stone-challenge-marvel-api.herokuapp.com/
+- 
 <br>
 
 ## Functionalities
