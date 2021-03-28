@@ -1,4 +1,4 @@
-# Stone challenge api
+# Marvel Node Api
 
 The project consists of an api rest that will allow the registration of users, management of users, favorite comics and characters.
 
