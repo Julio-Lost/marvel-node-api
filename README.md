@@ -2,12 +2,12 @@
 
 The project consists of an api rest that will allow the registration of users, management of users, favorite comics and characters.
 
-- Access here: https://stone-challenge-marvel-api.herokuapp.com/
+- Access here: https://marvel-node-api.herokuapp.com
 <br>
 
 ## Functionalities
 
-The description of the routes is available at the link: [Swagger](https://stone-challenge-marvel-api.herokuapp.com/api-docs/)
+The description of the routes is available at the link: [Swagger](https://marvel-node-api.herokuapp.com/api-docs/)
 
 <br>
 
