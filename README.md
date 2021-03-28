@@ -25,7 +25,7 @@ The description of the routes is available at the link: [Swagger](https://stone-
 
 ## Running the application in a development environment
 
-- Clone this repository with the command: <br>git clone https://github.com/Julio-Lost/stone-challenge-api.
+- Clone this repository with the command: <br>git clone https://github.com/Julio-Lost/marvel-node-api.
 
 - Have NPM or Yarn, Docker and Nodejs installed.
 
