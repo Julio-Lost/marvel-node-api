@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "STONE API",
+    "title": "MARVEL NODE API",
     "description": ""
   },
-  "host": "https://stone-challenge-marvel-api.herokuapp.com/api-docs/",
+  "host": "https://marvel-node-api.herokuapp.com/api-docs/",
   "basePath": "/",
   "tags": [],
   "schemes": [

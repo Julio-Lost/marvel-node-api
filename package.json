@@ -1,8 +1,8 @@
 {
-  "name": "stone-challenge-api",
+  "name": "marvel-challenge-api",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Julio-Lost/stone-challenge-api.git",
+  "repository": "https://github.com/Julio-Lost/marvel-node-api.git",
   "author": "Julio-Lost <juliolost00@gmail.com>",
   "license": "MIT",
   "scripts": {
